@@ -1,9 +1,9 @@
-
+import MainLayout from "../pages/MainLayout" 
 
 function App() {
   return (
     <div>
-      this is the AppComponnet
+     <MainLayout />
     </div>
   )
 }

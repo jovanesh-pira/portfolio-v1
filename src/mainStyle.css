@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@theme {
+  
+   --color-primary: #FF7A18;     /* Burnt Orange */
+  --color-white: #FFFFFF;       /* Pure White */
+  --color-dark-bg: #111827;     /* Deep Black/Navy */
+  --color-muted-text: #6B7280;  /* Medium Gray */
+  --color-light-surface: #F8F9FB; /* Off-White/Light Gray */
+  --color-border: #E5E7EB;      /* Border Gray */
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.dot_bg_effect{
+  @apply w-8 h-8 bg-primary/10 rounded-full absolute lg:left-1/2 lg:-translate-x-1/2 flex items-center justify-center
+}
+
