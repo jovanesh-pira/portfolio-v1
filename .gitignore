@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# npm cache (should never be committed)
+npm-cache/
+.npm/
+.npm-cache/
+
