@@ -18,7 +18,7 @@ function HeroComponnet() {
 </div>
         <h1 className="text-7xl font-semibold   text-center">Hi, I’m <span className="text-primary">Piramun</span> <br /> Frontend Developer</h1>
         <div className="relative  mt-25">
-            <div className="w-200 h-100 bg-primary rounded-tl-full rounded-tr-full"></div>
+            <div className="w-100 md:w-150 lg:w-200 h-60 md:h-100 bg-primary rounded-tl-full rounded-tr-full"></div>
             <img src="/HeroImage.png" alt="" className="absolute bottom-0 w-150 left-[50%] -translate-x-[50%]"/>
             {/* actions btns */}
     <HeroCtaPill></HeroCtaPill>

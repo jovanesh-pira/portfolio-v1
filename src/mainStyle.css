@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import 'swiper/css';
 @theme {
   
    --color-primary: #FF7A18;     /* Burnt Orange */
@@ -8,7 +8,7 @@
   --color-muted-text: #6B7280;  /* Medium Gray */
   --color-light-surface: #F8F9FB; /* Off-White/Light Gray */
   --color-border: #E5E7EB;      /* Border Gray */
-
+  --color-primary-50:#FF9446;
   /* Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
