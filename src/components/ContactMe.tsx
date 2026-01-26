@@ -51,38 +51,43 @@ export default function ContactMe() {
 
         {/* Email CTA */}
         <div className="mx-auto mt-10 max-w-2xl">
-          <div className="flex flex-col items-stretch gap-3 rounded-full border border-gray-200 px-4 py-3 shadow-sm sm:flex-row sm:items-center">
+          <div className="flex flex-row items-stretch gap-3 rounded-full md:border border-gray-200 px-4 py-3  sm:flex-row sm:items-center">
             {/* Icon */}
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/15 sm:mx-0">
+            {/* <div className="mx-auto flex h-12 w-16 items-center justify-center rounded-full bg-orange-500/15 sm:mx-0">
               <MdEmail className="text-orange-500 text-xl" />
-            </div>
+            </div> */}
 
             {/* Form */}
-            <form className="flex w-full flex-col gap-3 sm:flex-row sm:items-center">
+            <form className="flex w-full flex-col gap-3 sm:flex-row sm:items-center ">
+              <div className=" flex-1 flex flex-row gap-4 border border-gray-200 rounded-full px-2 py-2 md:border-0">
+                 <div className="mx-auto flex h-12 w-16 items-center justify-center rounded-full bg-orange-500/15 sm:mx-0">
+              <MdEmail className="text-orange-500 text-xl" />
+            </div>
               <input
                 type="email"
                 required
                 placeholder="Enter your email address"
                 className="w-full bg-transparent px-2 py-2 text-base outline-none placeholder:text-slate-400"
               />
-
-            
-            </form>
-              <button
-                type="submit"
-                className=" rounded-full bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
+              </div>
+                  <button
+                 type="submit"
+                className=" rounded-full  bg-orange-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-orange-600"
               >
                 Send
               </button>
+            
+            </form>
+             
           </div>
         </div>
 
         {/* Trust signals */}
-        <div className="mx-auto mt-8 grid max-w-3xl grid-cols-1 gap-4 text-sm text-slate-600 sm:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-fit md:max-w-4xl grid-cols-1 gap-4 text-sm text-slate-600 sm:grid-cols-3">
           {trustItems.map((item, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center gap-3 sm:justify-start"
+              className="flex items-center  gap-3 sm:justify-start"
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100">
                 {item.icon}

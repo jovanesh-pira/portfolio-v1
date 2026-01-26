@@ -17,34 +17,43 @@ const projectsSeed: Project[] = [
   {
     id: "portfolio",
     title: "Personal Portfolio Website",
-    subtitle: "React + Tailwind • RTL Ready",
+    subtitle: "React + Tailwind • TypeScript",
     description:
-      "This website is currently under development. Over time, real projects, case studies, and new sections will be added.",
-    tags: ["React", "Tailwind", "Responsive", "RTL"],
+      "Personal portfolio in active development. New real projects, case studies, and UI sections are added continuously.",
+    tags: ["React", "Tailwind", "TypeScript", "Responsive"],
     status: "in-progress",
     links: [{ label: "View Sections", href: "#sections" }],
+    image: "/Projects/project_01.png",
   },
+
   {
-    id: "ui-library",
-    title: "UI Components Library",
-    subtitle: "Buttons • Inputs • Cards • Modals",
+    id: "company-site",
+    title: "Company Website (Products + News)",
+    subtitle: "React Router • Sanity CMS • Swiper",
     description:
-      "Building a reusable UI component library with real states (hover, focus, disabled), proper contrast, and consistent spacing.",
-    tags: ["Design System", "Components", "Accessibility"],
-    status: "planned",
-    links: [{ label: "See Components", href: "#components" }],
+      "A real business website with product management and a news section powered by Sanity CMS, plus slider-based UI and contact/email integration. Maintenance-ready for future improvements and bug fixes.",
+    tags: ["React", "React Router", "Sanity", "Swiper", "Email Service"],
+    status: "in-progress", 
+    links: [
+      { label: "Live Website", href: "https://glittering-biscotti-4b1499.netlify.app/" },
+    ],
+    image: "/Projects/project_02.png",
   },
+
   {
-    id: "practice",
-    title: "UI → Code Practice Builds",
-    subtitle: "Clean Layouts • True Responsive",
-    description:
-      "Practicing UI-to-code implementation with a strong focus on grid, flexbox, responsiveness, and clean Tailwind structure.",
-    tags: ["Layout", "Grid", "Responsive", "Practice"],
-    status: "planned",
-    links: [{ label: "See Gallery", href: "#gallery" }],
+     id: "inventory-dashboard",
+  title: "Inventory Dashboard",
+  subtitle: "React • Firebase • CRUD",
+  description:
+    "An inventory management dashboard in progress with Firebase integration, authentication, and product CRUD logic. UI and advanced features are under active development.",
+  tags: ["React", "Firebase", "CRUD", "Auth"],
+  status: "in-progress",
+  links: [
+    { label: "GitHub Repository", href: "https://github.com/yourname/inventory-dashboard" }
+  ],
   },
 ];
+
 
 
 function cn(...classes: (string | undefined | false)[]) {
@@ -189,7 +198,7 @@ export default function PortfolioSectionPlaceholder() {
                     )}
                   >
                     {p.image ? (
-                      <img src={p.image} alt={p.title} className="h-44 w-full rounded-xl object-cover sm:h-52" />
+                      <img src={p.image} alt={p.title} className="h-44 w-full rounded-xl object-cover object-top sm:h-52" />
                     ) : (
                       <PlaceholderThumb seed={p.status === "in-progress" ? "IN PROGRESS" : "COMING SOON"} />
                     )}

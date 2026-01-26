@@ -16,8 +16,8 @@ export default function HeroCtaPill({
   return (
     <div
       className="
-        absolute bottom-5 left-[50%] -translate-[50%]
-        inline-flex items-center gap-2
+       absolute bottom-0 lg:bottom-5 left-[50%] -translate-[50%]
+        inline-flex items-center justify-center   gap-x-5 md:gap-4
         rounded-full
         border border-white/25
         bg-white/15
@@ -33,13 +33,13 @@ export default function HeroCtaPill({
           rounded-full
           bg-primary
           px-6 py-2.5
-          text-2xl font-medium text-white
+          text-xl font-medium text-white
           shadow-[inset_0_0_0_1px_rgba(255,255,255,0.20)]
           hover:brightness-105 transition
         "
       >
         {primaryText}
-             <FiArrowUpRight className="text-4xl"/>
+             <FiArrowUpRight className="text-2xl md:text-4xl"/>
       </a>
 
       <a
@@ -50,6 +50,7 @@ export default function HeroCtaPill({
           px-6 py-2.5
           text-2xl font-medium
           text-white
+          text-nowrap
           hover:bg-white/10 transition
         "
       >

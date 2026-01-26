@@ -16,6 +16,7 @@ export type Testimonial = {
   project: string;
   outcome: string;
   avatarFallback: string; 
+  avatar_img?:string
 };
 
 export const testimonialsSeed: Testimonial[] = [
@@ -31,6 +32,7 @@ export const testimonialsSeed: Testimonial[] = [
     project: "Inventory dashboard UI",
     outcome: "Faster product updates + fewer admin errors",
     avatarFallback: "AS",
+    avatar_img:"/avatar/image_1.jpg"
   },
   {
     id: "t2",
@@ -44,6 +46,7 @@ export const testimonialsSeed: Testimonial[] = [
     project: "Landing + product listing",
     outcome: "Improved mobile conversion and page speed",
     avatarFallback: "DK",
+     avatar_img:"/avatar/image_2.jpg"
   },
   {
     id: "t3",
@@ -57,6 +60,7 @@ export const testimonialsSeed: Testimonial[] = [
     project: "Component library + RTL support",
     outcome: "Reusable UI blocks for multiple pages",
     avatarFallback: "EP",
+     avatar_img:"/avatar/image_3.jpg"
   },
   {
     id: "t4",
@@ -70,6 +74,7 @@ export const testimonialsSeed: Testimonial[] = [
     project: "Menu + responsive issues fix",
     outcome: "Stable navigation on desktop & mobile",
     avatarFallback: "MT",
+    avatar_img:"/avatar/image_4.jpg"
   },
   {
     id: "t5",
@@ -83,6 +88,7 @@ export const testimonialsSeed: Testimonial[] = [
     project: "Product CRUD + search/filter UI",
     outcome: "Less time to manage catalog daily",
     avatarFallback: "ZN",
+    avatar_img:"/avatar/image_5.jpg"
   },
 ];
 
@@ -90,16 +96,16 @@ function TestimonialsSection() {
   return (
     <div className='bg-[url("/Services_bg.png")] min-h-10 w-full bg-cover bg-center '>
       <Container className='py-20 text-center '>
-               <div className='text-white'>
-                <h2 className='text-4xl text-white font-semibold text-center'>Testimonials That <br /> Speak to <span className='text-primary'>My Results</span></h2>
-               <p className='text-lg mt-10 text-gray-300'>A few words from people I’ve worked with—focused on reliability, clean UI, and production-ready React delivery.</p>
+               <div className=''>
+                <h2 className='text-4xl text-white font-semibold text-center leading-14'>Testimonials That <br /> Speak to <span className='text-primary'>My Results</span></h2>
+               <p className='text-lg mt-5 text-gray-400'>A few words from people I’ve worked with—focused on reliability, clean UI, and production-ready React delivery.</p>
                </div>
                 </Container>
                {/* Swiper Slider for Card */}
-               <div className="mx-auto max-w-500 px-4 mt-20 pb-20">
+               <div className="mx-auto max-w-500 px-4 mt-4 pb-20">
                 <Swiper
              spaceBetween={18}
-             slidesPerView={1.6}
+             slidesPerView={3}
              onSlideChange={() => console.log('slide change')}
              onSwiper={(swiper) => console.log(swiper)}
      
@@ -121,7 +127,7 @@ function TestimonialsSection() {
             breakpoints={{
               0: { slidesPerView: 1.12, spaceBetween: 12 },   
           640: { slidesPerView: 1.35, spaceBetween: 14 },
-          1024: { slidesPerView: 1.6, spaceBetween: 16 },
+          1024: { slidesPerView:3, spaceBetween: 32 },
             }}
       className='flex flex-row items-center justify-between gap-10'
     >
@@ -130,10 +136,12 @@ function TestimonialsSection() {
         <SwiperSlide> <div className='backdrop-blur-sm  min-h-10 bg-white/5 rounded-xl border border-white/20 py-15 px-12 relative'>
           <FaQuoteRight className='absolute top-10 right-20 text-7xl text-gray-200/5' />
       <div className='flex flex-row items-start gap-4'>
-        <div className='w-10 h-10 rounded-full bg-muted-text'></div>
-        <div className='flex flex-col items-start text-left justify-start text-gray-100'>
-          <h4>{item.name}</h4>
-        <p>{item.role}</p>
+        <div className='w-16 h-16 rounded-full bg-muted-text overflow-hidden'>
+          <img src={item.avatar_img?? ""} alt="" className='object-center object-cover'/>
+        </div>
+        <div className='flex flex-col items-start text-left justify-start text-gray-100 ml-4'>
+          <h4 className='text-xl'>{item.name}</h4>
+        <p className='text-lg text-gray-600 mt-4'>{item.role}</p>
         </div>
       </div>
      <div className='flex flex-row gap-2 items-center mt-3'>
@@ -143,7 +151,7 @@ function TestimonialsSection() {
       <p className='text-gray-200 text-lg font-semibold'>{item.rating.toFixed(1)}</p>
      </div>
      {/* text body  */}
-     <p className='text-left mt-5 text-gray-300 '>{item.text}</p>
+     <p className='text-left mt-5 text-gray-300 h-20 line-clamp-3'>{item.text}</p>
                      </div></SwiperSlide>
       )
       

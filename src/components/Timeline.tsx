@@ -9,25 +9,28 @@ type TimelineItem = {
 
 const items: TimelineItem[] = [
   {
-    year: "2024",
-    title: "UI/UX Foundations",
-    subtitle: "Design principles, layout, spacing, typography, and clean UI patterns.",
+    year: "01",
+    title: "UI & Requirements Alignment",
+    subtitle:
+      "Reviewing designs, defining scope, and clarifying requirements before writing any code.",
     side: "left",
   },
   {
-    year: "2025",
+    year: "02",
     title: "Frontend Implementation (React)",
-    subtitle: "Turning UI designs into responsive interfaces with React + Tailwind CSS.",
+    subtitle:
+      "Building responsive, scalable, and maintainable UI using React, TypeScript, and Tailwind CSS.",
     side: "right",
   },
   {
-    year: "2026",
-    title: "Portfolio & Client-Ready Delivery",
-    subtitle: "Landing pages and UI sections with attention to performance and details.",
+    year: "03",
+    title: "Polish, Testing & Delivery",
+    subtitle:
+      "Final checks, responsiveness, clean code, and production-ready delivery.",
     side: "left",
   },
-  
 ];
+
 
 
   function createDot(){
@@ -47,9 +50,10 @@ function CartTimeLine({title,year,subtitle}:TimelineItem){
  
  
   return (
-    <div className={`px-8   `}>
+    <div className={`px-8 relative  py-10 rounded-2xl`}>
+      <p className="text-3xl text-primary-50 mb-4 font-bold">{year}</p>
       <p className="text-2xl">{title}</p>
-      <p>{year}</p>
+      
       <p>{subtitle}</p>
     </div>
   )
@@ -58,6 +62,10 @@ function CartTimeLine({title,year,subtitle}:TimelineItem){
 
 function Timeline() {
     return(<Container className="py-40">
+      <div className="w-full mt-5 mb-20 text-center space-y-5"><h2 className="text-3xl font-semibold ">How I  
+ <span className="text-primary-50 inline-block pl-2">Work</span></h2>
+      <p className="text-xl text-gray-400 mb-20">A clear, simple process from idea to production-ready frontend.
+</p></div>
       <div className="relative ">
         {/* A line in the Middle */}
          <div className="

@@ -20,6 +20,8 @@ export default function MainLayout() {
    <TestimonialsSection/>
    <ContactMe/>
    <Footer/>
-   </>
+   
+</>
+
   );
 }
